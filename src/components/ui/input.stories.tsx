@@ -5,7 +5,10 @@ import { Input } from "@/components/ui/input"
 const meta: Meta<typeof Input> = {
   title: "Atoms/Input",
   component: Input,
-  argTypes:{
+  argTypes: {
+    eyeIconSize:{
+    defaultValue: 20
+    },
     type: {
       options: [
         "text",
@@ -25,7 +28,7 @@ const meta: Meta<typeof Input> = {
       }
     }
   },
-  args:{
+  args: {
     style: {
       width: "400px"
     }
@@ -100,5 +103,14 @@ export const ReadOnly: Story = {
     type: "text",
     value: "Read-only text",
     readOnly: true,
+  },
+}
+
+// 9. Password input
+export const PasswordWithIcon: Story = {
+  args: {
+    type: "password",
+    placeholder: "Enter your password",
+    showEyeIcon: true
   },
 }
