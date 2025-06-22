@@ -20,9 +20,6 @@ const meta: Meta<typeof Button> = {
     className: {
       control: false,
     },
-    animatedBgColor:{
-      defaultValue :"#00d8ff"
-    }
   },
   args: {
     children: "Button",
@@ -83,6 +80,6 @@ export const AnimatedButton: Story = {
   args: {
     variant:"animated",
     size: "lg",
-   animatedBgColor: "default"
+    animatedBgColor: "#029cfd"
   },
 }
