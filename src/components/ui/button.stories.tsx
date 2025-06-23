@@ -8,7 +8,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: { type: "select" },
-      options: ["default", "destructive", "outline", "secondary", "ghost", "link"],
+      options: ["default", "destructive", "outline", "secondary", "ghost", "link", "animated"],
     },
     size: {
       control: { type: "select" },
@@ -73,5 +73,13 @@ export const Small: Story = {
 export const Large: Story = {
   args: {
     size: "lg",
+  },
+}
+
+export const AnimatedButton: Story = {
+  args: {
+    variant:"animated",
+    size: "lg",
+    animatedBgColor: "#029cfd"
   },
 }
