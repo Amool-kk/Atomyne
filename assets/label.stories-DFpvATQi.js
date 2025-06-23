@@ -1,0 +1,6 @@
+import{r as c,j as l}from"./iframe-7INQHGgC.js";import{P as u}from"./index-BWcLHgG_.js";import{a as p}from"./utils-Cqcfk0e8.js";import"./index-DQKxcJSW.js";import"./index-BkPsWSOc.js";import"./index-DhqRw9CH.js";var f="Label",d=c.forwardRef((e,r)=>l.jsx(u.label,{...e,ref:r,onMouseDown:t=>{var o;t.target.closest("button, input, select, textarea")||((o=e.onMouseDown)==null||o.call(e,t),!t.defaultPrevented&&t.detail>1&&t.preventDefault())}}));d.displayName=f;var g=d;function m({className:e,...r}){return l.jsx(g,{"data-slot":"label",className:p("flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",e),...r})}m.__docgenInfo={description:"",methods:[],displayName:"Label"};const y={title:"Atoms/Label",tags:["autodocs"],component:m},a={args:{htmlFor:"terms",children:"testing"}};var s,n,i;a.parameters={...a.parameters,docs:{...(s=a.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  args: {
+    htmlFor: "terms",
+    children: "testing"
+  }
+}`,...(i=(n=a.parameters)==null?void 0:n.docs)==null?void 0:i.source}}};const E=["Default"];export{a as Default,E as __namedExportsOrder,y as default};
