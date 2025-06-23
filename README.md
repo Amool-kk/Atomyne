@@ -110,6 +110,10 @@ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO 
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
+## 📬 Contact
+For questions, issues, or feedback, reach out to the maintainers:
+* amoolkumar10@gmail.com
 
+* bodhankargajanan99@gmail.com
 
-> **_NOTE:_** For any questions or issues, please contact the project maintainer at [amoolkumar10@gmail.com] and [bodhankargajanan99@gmail.com].
+> **_NOTE:_** Thank you for using Atomyne! Contributions and suggestions are always welcome.
