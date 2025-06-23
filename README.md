@@ -112,8 +112,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 ## 📬 Contact
 For questions, issues, or feedback, reach out to the maintainers:
-* amoolkumar10@gmail.com
+* [Amool Kuldiya](amoolkumar10@gmail.com)    [LinkedIn](https://www.linkedin.com/in/amool-kuldiya/)
 
-* bodhankargajanan99@gmail.com
+* [Gajanan Bodhankar](bodhankargajanan99@gmail.com)     [LinkedIn](https://www.linkedin.com/in/gajananbodhankar/)
 
 > **_NOTE:_** Thank you for using Atomyne! Contributions and suggestions are always welcome.
