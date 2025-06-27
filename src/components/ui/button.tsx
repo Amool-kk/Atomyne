@@ -42,18 +42,22 @@ function Button({
   size,
   asChild = false,
   animatedBgColor,
+  buttonColor,
+  textColor,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean,
     animatedBgColor?: string
+    buttonColor?: string,
+    textColor?: string
   }) {
   const Comp = asChild ? Slot : "button"
 
   return (
     <Comp
       data-slot="button"
-      style={animatedBgColor ? { "--animatedBg": animatedBgColor } as React.CSSProperties : {}}
+      style={{ "--animatedBg": animatedBgColor, backgroundColor: buttonColor ? buttonColor : "", color: textColor ? textColor : "" } as React.CSSProperties}
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />
