@@ -40,3 +40,28 @@
 .read-the-docs {
   color: #888;
 }
+
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+
+select {
+  flex: 1;
+}
+select {
+  border: 2px solid #ddd;
+  background: #eee;
+  padding: 10px;
+}
+
+select::picker-icon {
+  color: #e21e1e;
+  transition: 0.4s rotate;
+}
+select:open::picker-icon {
+  rotate: 180deg;
+}
+  
