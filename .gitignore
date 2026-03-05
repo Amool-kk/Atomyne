@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.npm/
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# Storybook output
+storybook-static/
+
+# Test artifacts
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Cache/temp
+.cache/
+.tmp/
+tmp/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Editor/OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+!.vscode/extensions.json
