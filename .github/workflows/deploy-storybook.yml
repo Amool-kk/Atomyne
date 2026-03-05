@@ -1,26 +1,31 @@
-name: Deploy Storybook to GitHub Pages
+name: Build & Deploy Storybook
 
 on:
   push:
     branches:
-      - main
+      - main  # deploy happens after PR merge
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: storybook
   cancel-in-progress: true
 
 jobs:
+  # -----------------------------
+  # 1️⃣ Build Job
+  # -----------------------------
   build:
     runs-on: ubuntu-latest
-
+    outputs:
+      storybook-path: ${{ steps.build.outputs.storybook-path }}
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup pnpm
@@ -42,24 +47,28 @@ jobs:
         run: pnpm --filter @atomyne/ui-react build
 
       - name: Build Storybook
-        run: pnpm --filter @atomyne/ui build-storybook
+        id: build
+        run: |
+          pnpm --filter @atomyne/ui build-storybook
+          echo "storybook-path=packages/docs/storybook-static" >> $GITHUB_OUTPUT
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: packages/docs/storybook-static
-
+  # -----------------------------
+  # 2️⃣ Deploy Job
+  # -----------------------------
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-
+    if: github.ref == 'refs/heads/main' # run only on main branch
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy Storybook to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ needs.build.outputs.storybook-path }}
+          publish_branch: gh-pages
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          destination_dir: Atomyne
