@@ -1,0 +1,25 @@
+{
+  "name": "@atomyne/monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @atomyne/ui-core build && pnpm --filter @atomyne/ui-react build && pnpm --filter @atomyne/ui storybook",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint"
+  },
+  "devDependencies": {
+    "esbuild": "0.21.5",
+    "typescript": "^5.7.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "0.21.5"
+    }
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
